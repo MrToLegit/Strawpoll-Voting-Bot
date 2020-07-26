@@ -39,6 +39,7 @@ usedproxys = list()
 
 votes = 0
 def bot(i):
+    global votes
     f = open("proxies.txt", "r")
     for x in f:
         if x in usedproxys:
@@ -69,7 +70,7 @@ def bot(i):
 
             time.sleep(1) # Let the user actually see something!
                     
-            votes = votes + 1
+            votes += 1
             print("Successfully voted! (" + str(votes) + ")")
             time.sleep(0.1)
             driver.close()
